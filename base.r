@@ -48,5 +48,5 @@ inspect(head(sort(trans.rules.pruned, by='lift'),n=20))
 binarymat.pin.pruned <- ifelse(table(trans.pruned$交易id, trans.pruned$品號.品名稱) > 0,1,0)
 trans.pin.rules.pruned <- apriori(binarymat.pin.pruned, parameter=list(supp=0.01,conf=0.3,target='rules'))
 inspect(head(sort(trans.pin.rules, by='lift'),n=20))
-########################################
+#########################################################
 
